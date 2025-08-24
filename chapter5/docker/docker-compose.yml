@@ -1,5 +1,3 @@
-version: '2.1'
-
 services:
   database:
     image: postgres:latest
@@ -30,7 +28,11 @@ services:
       - "8071:8071"
     environment:
       ENCRYPT_KEY: "fje83Ki8403Iod87dne7Yjsl3THueh48jfuO9j4U2hf64Lo"
-      SPRING_PROFILES_ACTIVE: "native"  # Explicitly set profile
+      SPRING_PROFILES_ACTIVE: "git"
+      SPRING_CLOUD_CONFIG_SERVER_GIT_URI: "https://github.com/mauriciotl/ConfMgmtSpringMicro.git"
+      SPRING_CLOUD_CONFIG_SERVER_GIT_USERNAME: "mauriciotl"
+      SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD: "github_pat_redacted11ADDXSFY0SFqp6Fmo8Ydw_R3x5ki372YoCbiNdbJfVMFuDb8Rwj9cif9YwSUs6CdXLYXT7A2DPgSc4YuZ"
+      SPRING_CLOUD_CONFIG_SERVER_GIT_DEFAULT_LABEL: "main"
     networks:
       backend:
         aliases:
