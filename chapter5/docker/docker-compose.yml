@@ -11,7 +11,7 @@ services:
       SPRING_PROFILES_ACTIVE: "git"
       SPRING_CLOUD_CONFIG_SERVER_GIT_URI: "https://github.com/mauriciotl/ConfMgmtSpringMicro.git"
       SPRING_CLOUD_CONFIG_SERVER_GIT_USERNAME: "mauriciotl"
-      SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD: "github_pat_redacted11ADDXSFY0SFqp6Fmo8Ydw_R3x5ki372YoCbiNdbJfVMFuDb8Rwj9cif9YwSUs6CdXLYXT7A2DPgSc4YuZ"
+      SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD: "github_pat_redacted MAU: Upadate with the right curret one"
       SPRING_CLOUD_CONFIG_SERVER_GIT_DEFAULT_LABEL: "main"
     networks:
       backend:
