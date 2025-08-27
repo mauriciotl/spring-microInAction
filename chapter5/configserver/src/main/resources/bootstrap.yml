@@ -3,16 +3,13 @@ spring:
     name: config-server
   profiles:
     active:
-    - native, git
+    - native
   cloud:
     config:
       server:
         native:
           search-locations: classpath:/config
-        #git:
-         # uri: https://github.com/ihuaylupo/config.git
-          #searchPaths: licensingservice
-    
+
 server:
   port: 8071
   
@@ -26,3 +23,7 @@ management:
     web:
       exposure:
         include: "*"
+
+logging:
+  level:
+    org.springframework: DEBUG

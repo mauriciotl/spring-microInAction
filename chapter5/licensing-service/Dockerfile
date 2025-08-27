@@ -9,7 +9,11 @@ LABEL maintainer="Illary Huaylupo <illaryhs@gmail.com>"
 ARG JAR_FILE
 
 # Add the application's jar to the container
-COPY ${JAR_FILE} app.jar
+#COPY ${JAR_FILE} app.jar
+
+# Copy the specific JAR file
+COPY target/licensing-service-0.0.2-SNAPSHOT.jar app.jar
+
 
 #unpackage jar file
 RUN mkdir -p target/dependency && (cd target/dependency; jar -xf /app.jar)
