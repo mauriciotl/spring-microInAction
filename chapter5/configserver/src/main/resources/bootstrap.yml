@@ -3,12 +3,18 @@ spring:
     name: config-server
   profiles:
     active:
-    - native
+    - git
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:/config
+        git:
+          uri: ${GIT_URI}
+          username: ${GIT_USERNAME}
+          password: ${GIT_PASSWORD}
+          default-label: main
+          search-paths: licensingservice
+          clone-on-start: true
+
 
 server:
   port: 8071
@@ -27,3 +33,5 @@ management:
 logging:
   level:
     org.springframework: DEBUG
+#    org.springframework.cloud.config: DEBUG
+#    org.eclipse.jgit: DEBUG

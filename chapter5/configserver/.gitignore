@@ -29,3 +29,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Ignore all .env files everywhere
+*.env
+# Ignore any env files with prefixes
+.env*

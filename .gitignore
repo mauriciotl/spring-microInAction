@@ -53,3 +53,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Ignore all .env files everywhere
+*.env
+# Ignore any env files with prefixes
+.env*
+
+# The one fetched from git repository, not needed to be git tracked.
+chapter5/ConfMgmtSpringMicro/
