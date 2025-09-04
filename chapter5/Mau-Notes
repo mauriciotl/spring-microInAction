@@ -1,0 +1,6 @@
+For .env variables use HarshipCorp Vault server intead.
+Variables such as the followign, also available in local files.
+GIT_URI=https:the repos config in github
+GIT_USERNAME=
+GIT_PASSWORD=
+ENCRYPT_KEY=

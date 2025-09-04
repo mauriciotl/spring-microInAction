@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: vault
+  cloud:
+    config:
+      server:
+        vault:
+          host: host.docker.internal
+          port: 8200
+          scheme: http
+          kvVersion: 2
+          authentication: TOKEN
+          token: root
+          backend: licensing-service
+          default-key: default
