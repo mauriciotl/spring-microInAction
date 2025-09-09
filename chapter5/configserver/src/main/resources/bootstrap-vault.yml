@@ -11,5 +11,6 @@ spring:
           kvVersion: 2
           authentication: TOKEN
           token: root
+          #Following are for the example property from the book.
           backend: licensing-service
           default-key: default
