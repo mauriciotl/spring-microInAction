@@ -70,6 +70,7 @@ public class LicenseService {
 			organization = organizationDiscoveryClient.getOrganization(organizationId);
 			break;
 		default:
+			System.out.println("Since no service discovery (client) implementation was not selected: I am using the rest client");
 			organization = organizationRestClient.getOrganization(organizationId);
 			break;
 		}
