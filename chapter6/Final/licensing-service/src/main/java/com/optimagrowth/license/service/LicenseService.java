@@ -11,9 +11,9 @@ import com.optimagrowth.license.config.ServiceConfig;
 import com.optimagrowth.license.model.License;
 import com.optimagrowth.license.model.Organization;
 import com.optimagrowth.license.repository.LicenseRepository;
-import com.optimagrowth.license.service.client.OrganizationDiscoveryClient;
-import com.optimagrowth.license.service.client.OrganizationFeignClient;
-import com.optimagrowth.license.service.client.OrganizationRestTemplateClient;
+import com.optimagrowth.license.serviceDiscovery.OrganizationDiscoveryClient;
+import com.optimagrowth.license.serviceDiscovery.OrganizationFeignClient;
+import com.optimagrowth.license.serviceDiscovery.OrganizationRestTemplateClient;
 
 @Service
 public class LicenseService {

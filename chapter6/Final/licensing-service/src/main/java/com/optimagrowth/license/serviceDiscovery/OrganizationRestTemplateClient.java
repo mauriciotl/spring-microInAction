@@ -1,4 +1,4 @@
-package com.optimagrowth.license.service.client;
+package com.optimagrowth.license.serviceDiscovery;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
