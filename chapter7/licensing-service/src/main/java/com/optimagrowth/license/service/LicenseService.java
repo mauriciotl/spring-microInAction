@@ -114,14 +114,15 @@ public class LicenseService {
 
 	}
 
-	@CircuitBreaker(name = "licenseService", fallbackMethod = "buildFallbackLicenseList")
-	@RateLimiter(name = "licenseService", fallbackMethod = "buildFallbackLicenseList")
-	@Retry(name = "retryLicenseService", fallbackMethod = "buildFallbackLicenseList")
-	@Bulkhead(name = "bulkheadLicenseService", type= Type.THREADPOOL, fallbackMethod = "buildFallbackLicenseList")
+//	@CircuitBreaker(name = "licenseService", fallbackMethod = "buildFallbackLicenseList")
+//	@RateLimiter(name = "licenseService", fallbackMethod = "buildFallbackLicenseList")
+//	@Retry(name = "retryLicenseService", fallbackMethod = "buildFallbackLicenseList")
+//	@Bulkhead(name = "bulkheadLicenseService", type= Type.THREADPOOL, fallbackMethod = "buildFallbackLicenseList")
 	public List<License> getLicensesByOrganization(String organizationId) throws TimeoutException {
+		System.out.println("Test Mau ============== entering the getLicensesByOrganization () method, uses resiliency patterns. ============");
 		logger.debug("getLicensesByOrganization Correlation id: {}",
 				UserContextHolder.getContext().getCorrelationId());
-		randomlyRunLong();
+//		randomlyRunLong();
 		return licenseRepository.findByOrganizationId(organizationId);
 	}
 
