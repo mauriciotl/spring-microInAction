@@ -21,7 +21,10 @@ services:
       timeout: 5s
       retries: 5
   configserver:
-    image: ostock/configserver:0.0.1-SNAPSHOT
+    build:
+      context: ../configserver
+      dockerfile: Dockerfile
+    image: ostock/configserver:0.0.1-SNAP-chapter08
     ports:
        - "8071:8071"
     environment:
@@ -31,7 +34,10 @@ services:
         aliases:
           - "configserver"
   eurekaserver:
-    image: ostock/eurekaserver:0.0.1-SNAPSHOT
+    build:
+      context: ../eurekaserver
+      dockerfile: Dockerfile
+    image: ostock/eurekaserver:0.0.1-SNAP-chapter08
     ports:
       - "8070:8070"
     depends_on:
@@ -44,7 +50,10 @@ services:
         aliases:
           - "eurekaserver"
   gatewayserver:
-    image: ostock/gatewayserver:0.0.1-SNAPSHOT
+    build:
+      context: ../gatewayserver
+      dockerfile: Dockerfile
+    image: ostock/gatewayserver:0.0.1-SNAP-chapter08
     ports:
       - "8072:8072"
     environment:
@@ -66,7 +75,10 @@ services:
         aliases:
           - "gateway"
   licensingservice:
-    image: ostock/licensing-service:0.0.3-SNAPSHOT
+    build:
+      context: ../licensing-service
+      dockerfile: Dockerfile
+    image: ostock/licensing-service:0.0.3-SNAP-chapter08
     environment:
       PROFILE: "dev"
       CONFIGSERVER_URI: "http://configserver:8071"
@@ -83,7 +95,10 @@ services:
     networks:
       - backend
   organizationservice:
-    image: ostock/organization-service:0.0.1-SNAPSHOT
+    build:
+      context: ../organization-service
+      dockerfile: Dockerfile
+    image: ostock/organization-service:0.0.1-SNAP-chapter08
     environment:
       PROFILE: "dev"
       CONFIGSERVER_URI: "http://configserver:8071"
